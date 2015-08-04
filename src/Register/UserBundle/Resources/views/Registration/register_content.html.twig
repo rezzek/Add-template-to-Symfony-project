@@ -1,0 +1,31 @@
+{% trans_default_domain 'FOSUserBundle' %}
+{% block content %}
+<form action="{{ path('fos_user_registration_register') }}" {{ form_enctype(form) }} method="POST" class="fos_user_registration_register" >
+<div class="container" >
+         <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">                   
+           <div class="panel panel-info" >
+         <div style="padding-top:30px" class="panel-body" >
+
+
+         <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
+         <fieldset>
+                 <div class="form-group">
+                               {{ form_widget(form) }}
+                 </div>
+                               <div class="form-group">
+                                   <!-- Button -->                                        
+                                
+                                       <input type="submit" id="btn-signup" class="btn btn-primary btn-block" id="submit" value="{{ 'registration.submit'|trans({}, 'FOSUserBundle') }}"/>
+                                       <center> 
+                                       <a href="{{ path("fos_user_security_login") }}">Vous avez déjà un compte</a></fieldset>
+                                     </center>
+                               </div>
+                               
+                              
+         </fieldset>
+</div>
+</div>
+</div>
+</div>
+</form>
+{% endblock %}
